@@ -6,8 +6,9 @@ Example for this program (WinDbg Preview):
 1. Download the following .ps1 script:
   >>> Script link: https://raw.githubusercontent.com/MattiasC85/Scripts/master/OSD/Download-AppxFromStore.ps1
   Command example: wget --no-check-certificate https://raw.githubusercontent.com/MattiasC85/Scripts/master/OSD/Download-AppxFromStore.ps1
-2. Run the downloaded script in powershell:
+2. Run the downloaded script in powershell (:
   Command example: ./Download-AppxFromStore.ps1 -StoreURL https://www.microsoft.com/store/apps/9pgjgd53tn86
+  >>> if you've get an error about script signature then look down here (NOTE title) to solve this problem.
   where 9pgjgd53tn86 - it's a program ID (placed in an url of program which you need to download)
   Downloaded program will be saved in the Temporary directory which dirname is ID of your program.
 3. Double-Click on a downloaded file with .appx extension
