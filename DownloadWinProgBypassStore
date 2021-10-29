@@ -1,0 +1,26 @@
+Keywords: bypass windows store, download WinDbg Preview
+
+Example for this program (WinDbg Preview):
+  Link to the program: https://www.microsoft.com/en-us/p/windbg-preview/9pgjgd53tn86?atc=true&activetab=pivot:overviewtab
+
+1. Download the following .ps1 script:
+  >>> Script link: https://raw.githubusercontent.com/MattiasC85/Scripts/master/OSD/Download-AppxFromStore.ps1
+  Command example: wget --no-check-certificate https://raw.githubusercontent.com/MattiasC85/Scripts/master/OSD/Download-AppxFromStore.ps1
+2. Run the downloaded script in powershell:
+  Command example: ./Download-AppxFromStore.ps1 -StoreURL https://www.microsoft.com/store/apps/9pgjgd53tn86
+  where 9pgjgd53tn86 - it's a program ID (placed in an url of program which you need to download)
+  Downloaded program will be saved in the Temporary directory which dirname is ID of your program.
+3. Double-Click on a downloaded file with .appx extension
+
+NOTE:
+  >>> When you run a .ps1 PowerShell script you might get the message saying “.ps1 is not digitally signed. The script will not execute on the system.”
+  >>> To fix it you have to run the command below to run Set-ExecutionPolicy and change the Execution Policy setting.
+  Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+  >>> This command sets the execution policy to bypass for only the current PowerShell session after the window is closed, 
+  >>> the next PowerShell session will open running with the default execution policy. 
+  >>> “Bypass” means nothing is blocked and no warnings, prompts, or messages will be displayed.
+  Source: https://caiomsouza.medium.com/fix-for-powershell-script-not-digitally-signed-69f0ed518715
+
+LINKS:
+  1. https://caiomsouza.medium.com/fix-for-powershell-script-not-digitally-signed-69f0ed518715
+  2. https://github.com/microsoftfeedback/WinDbg-Feedback/issues/19
