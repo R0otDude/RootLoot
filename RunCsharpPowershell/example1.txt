@@ -1,0 +1,104 @@
+$code = @"
+using System;
+using System.IO;
+using System.Reflection;
+using System.Security.Cryptography;
+// using Microsoft.VisualBasic.CompilerServices;
+
+public class gaUxN
+{
+    public static int[] int_0;
+   
+    public static void start() {
+        Console.Write(AaQEJ(int_0[0] + sizeof(float) - int_0[1]));
+    }
+
+    public unsafe static int AaQEJ(int kwhnn)
+	{
+		int num = 0;
+		int result = default(int);
+		int num2 = default(int);
+		while (num != 5)
+		{
+			if (num == 4)
+			{
+				result = int_0[16] - sizeof(Guid) + int_0[17];
+				num = 5;
+			}
+			if (num == 7)
+			{
+				if (num2 <= int_0[18] - sizeof(char) - int_0[19])
+				{
+					goto IL_0080;
+				}
+				num = -54 + sizeof(long) + int_0[20];
+			}
+			if (num == 2)
+			{
+				num2 = -360 - sizeof(sbyte) + int_0[21];
+				num = 3;
+			}
+			if (num == 3)
+			{
+				goto IL_0080;
+			}
+			goto IL_0086;
+			IL_0094:
+			num2 = checked(num2 + 1);
+			num = 7;
+			goto IL_009a;
+			IL_009a:
+			if (num == 0)
+			{
+				num = 1;
+			}
+			if (num == -312 + sizeof(ConsoleKeyInfo) + int_0[22])
+			{
+				break;
+			}
+			continue;
+			IL_0086:
+			if (num == 1)
+			{
+				num = 2;
+			}
+			if (num == 6)
+			{
+				goto IL_0094;
+			}
+			goto IL_009a;
+			IL_0080:
+			if (num2 == kwhnn)
+			{
+				num = 4;
+				goto IL_0086;
+			}
+			goto IL_0094;
+		}
+		return result;
+	}
+    
+    static gaUxN()
+	{
+		int_0 = new int[86]
+		{
+			669, 581, 627, 122, 527, 283, 202, 555, 518, 87,
+			981, 108, 399, 361, 896, 827, 5292, 110, 847, 745,
+			54, 369, 308, 2700, 667, 395, 297, 718, 1637, 883,
+			124, 413, 235, 826, 727, 717, 936, 929, 25, 13728,
+			850, 191, 11472, 709, 306, 298, 975, 350, 879, 812,
+			812, 544, 552, 109, 193, 7616, 852, 812, 812, 868,
+			860, 845, 1098, 994, 182, 124, 116, 917, 20, 921,
+			90, 215, 1000, 904, 340, 340, 334, 675, 757, 753,
+			427, 537, 436, 125, 165, 156
+		};
+	}
+}
+"@
+
+$cp = New-Object System.CodeDom.Compiler.CompilerParameters
+$cp.ReferencedAssemblies.AddRange(('System.Windows.Forms.dll','System.Drawing.dll'))
+$cp.CompilerOptions = '/unsafe'
+
+Add-Type -TypeDefinition $code -Language CSharp -CompilerParameters $cp
+[gaUxN]::start()
